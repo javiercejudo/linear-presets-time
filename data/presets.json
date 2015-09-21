@@ -1,14 +1,17 @@
 {
-  "secondToNanosecond": [[0, 1], [0, 1e9]],
-  "secondToMicrosecond": [[0, 1], [0, 1e6]],
-  "secondToMillisecond": [[0, 1], [0, 1e3]],
-  "secondToMinute": [[0, 60], [0, 1]],
-  "secondToHour": [[0, 3600], [0, 1]],
-  "secondToDay": [[0, 86400], [0, 1]],
-  "secondToWeek": [[0, 604800], [0, 1]],
-  "secondToMonth": [[0, 2629746], [0, 1]],
-  "secondToYear": [[0, 31556952], [0, 1]],
-  "secondToDecade": [[0, 315569520], [0, 1]],
-  "secondToCentury": [[0, 3155695200], [0, 1]],
-  "secondToMillennium": [[0, 31556952000], [0, 1]]
+  "base": "second",
+  "conversions": {
+    "nanosecond": [[0, 1], [0, 1e9]],
+    "microsecond": [[0, 1], [0, 1e6]],
+    "millisecond": [[0, 1], [0, 1e3]],
+    "minute": [[0, 60], [0, 1]],
+    "hour": [[0, 3600], [0, 1]],
+    "day": [[0, 86400], [0, 1]],
+    "week": [[0, 604800], [0, 1]],
+    "month": [[0, 2629746], [0, 1]],
+    "year": [[0, 31556952], [0, 1]],
+    "decade": [[0, 315569520], [0, 1]],
+    "century": [[0, 3155695200], [0, 1]],
+    "millennium": [[0, 31556952000], [0, 1]]
+  }
 }
