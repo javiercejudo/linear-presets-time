@@ -1,6 +1,7 @@
 {
   "base": "second",
   "conversions": {
+    "second": [[0, 1], [0, 1]],
     "nanosecond": [[0, 1], [0, 1e9]],
     "microsecond": [[0, 1], [0, 1e6]],
     "millisecond": [[0, 1], [0, 1e3]],
