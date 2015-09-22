@@ -1,6 +1,6 @@
 {
   "name": "linear-presets-time",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Linear presets for time units",
   "main": "src/linear-presets-time.js",
   "scripts": {
