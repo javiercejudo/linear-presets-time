@@ -9,16 +9,17 @@ var rescale = require('rescale')(Decimal).rescale;
 var time = require('linear-preset-factory')(require('../src/linear-presets-time'));
 
 function convert(x, preset) {
-  return Number(rescale(x, preset[0], preset[1]));
-};
+  return Number(rescale(preset[0], preset[1], x));
+}
 
 function invert(preset) {
   return preset.slice(0).reverse();
-};
+}
 
 describe('time presets', function() {
   it('should convert correctly', function() {
-    (259200).should.be.exactly(convert(259200000000000, invert(time.second_nanosecond)), 'second_nanosecond')
+    (259200).should.be.exactly(convert(259200, invert(time.second_second)), 'second_second')
+      .and.exactly(convert(259200000000000, invert(time.second_nanosecond)), 'second_nanosecond')
       .and.exactly(convert(259200000000, invert(time.second_microsecond)), 'second_microsecond')
       .and.exactly(convert(259200000000, invert(time.second_microsecond)), 'second_microsecond')
       .and.exactly(convert(259200000, invert(time.second_millisecond)), 'second_millisecond')
@@ -32,7 +33,8 @@ describe('time presets', function() {
       .and.exactly(convert(0.00008213721020965523, invert(time.second_century)), 'second_century')
       .and.approximately(convert(0.000008213721020965522, invert(time.second_millennium)), 10e-11, 'second_millennium');
 
-    (0).should.be.exactly(convert(0, time.second_nanosecond), 'second_nanosecond')
+    (0).should.be.exactly(convert(0, time.second_second), 'second_second')
+      .and.exactly(convert(0, time.second_nanosecond), 'second_nanosecond')
       .and.exactly(convert(0, time.second_microsecond), 'second_microsecond')
       .and.exactly(convert(0, time.second_microsecond), 'second_microsecond')
       .and.exactly(convert(0, time.second_millisecond), 'second_millisecond')
