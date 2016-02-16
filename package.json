@@ -30,7 +30,7 @@
     "gulp-mocha": "^2.0.0",
     "linear-arbitrary-precision": "^3.1.0",
     "linear-preset-factory": "^1.0.2",
-    "rescale": "^8.0.0",
+    "rescale": "^10.0.0",
     "rimraf": "^2.3.2",
     "should": "^8.0.0"
   }
